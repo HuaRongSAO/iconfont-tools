@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.1.6...v1.2.0) (2019-09-18)
+
+
+### Features
+
+* 新增wxss的生成 ([c851510](https://github.com/HuaRongSAO/iconfont-tools/commit/c851510))
+* 新增wxss的生成 ([7999f05](https://github.com/HuaRongSAO/iconfont-tools/commit/7999f05))
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.1.4...v1.1.6) (2019-09-18)
 
