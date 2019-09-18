@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.2.1...v1.2.2) (2019-09-18)
+
+
+### Bug Fixes
+
+* 修改图片地址 ([9a64e76](https://github.com/HuaRongSAO/iconfont-tools/commit/9a64e76))
+* 修改图片地址 ([ebadc4e](https://github.com/HuaRongSAO/iconfont-tools/commit/ebadc4e))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.2.0...v1.2.1) (2019-09-18)
 
