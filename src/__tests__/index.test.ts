@@ -15,13 +15,13 @@ const DEFAULT_OPTION = {
   component: true,
 }
 
-test('create', async () => {
+test('create', async function() {
   const target = await create(DEFAULT_OPTION)
   const fileStats = fs.statSync(target)
   expect(fileStats.isDirectory()).toBe(false)
 })
 
-test('create remove', async () => {
+test('create remove', async function() {
   const target = `${TARGET_PATH}/${DEFAULT_OPTION.dirName}`
   await utils.rmdir(target)
   let exit = true

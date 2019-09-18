@@ -8,20 +8,20 @@ const dirName = 'iconfont-weapp'
 const fileName = 'iconfont.css'
 const ext = new Extract(testPath, dirName, fileName)
 
-test('Extract mkdir', async () => {
+test('Extract mkdir', async function() {
   await ext.generateDir()
   const fgt = fs.statSync(`${testPath}/iconfont-weapp`)
   expect(fgt.isDirectory()).toBe(true)
 })
 
-test('Extract css', async () => {
+test('Extract css', async function() {
   ext.setContent('hello world')
   const targetCss = await ext.generate()
   const fgt = fs.readFileSync(targetCss, 'utf-8')
   expect(fgt).toBe('hello world')
 })
 
-test('Extract clearDir', async () => {
+test('Extract clearDir', async function() {
   const delDir = await ext.clearDir()
   let exit = true
   try {
