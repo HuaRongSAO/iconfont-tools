@@ -28,6 +28,10 @@ iconfont-tools  // 生成小程序专用文件
 
 ```
 
+## 实现原理
+
+[click](./docs/README.md)
+
 ## 演示
 
 ![img](./docs/cli.gif)
