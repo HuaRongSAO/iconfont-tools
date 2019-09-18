@@ -1,10 +1,10 @@
 {
   "name": "iconfont-tools",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "iconfont，小程序彩色图标方案，小程序彩色iconfont",
   "main": "lib/index.js",
   "bin": {
-    "iconfont-tool": "lib/cli.js"
+    "iconfont-tool": "node lib/cli.js"
   },
   "types": "lib/index.d.ts",
   "scripts": {
