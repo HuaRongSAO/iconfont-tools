@@ -27,7 +27,9 @@ export class Extract {
   async getIconfontContent() {
     const target = `${this.path}/${INPUT_FILE}`
     const content: any = await utils.readFile(target)
-    if (content === false) throw new Error(`对不起，当前目录下不存在 iconfont.js 文件：${target}`)
+    if (content === false) {
+      throw new Error(`对不起，当前目录下不存在 iconfont.js 文件：${target}`)
+    }
     return content
   }
 
@@ -41,7 +43,9 @@ export class Extract {
     const { targetDir } = this
     await this.clearDir()
     const mk = await utils.mkdir(targetDir)
-    if (!mk) throw new Error(`创建文件夹：${targetDir} 失败`)
+    if (!mk) {
+      throw new Error(`创建文件夹：${targetDir} 失败`)
+    }
     return targetDir
   }
 
@@ -50,7 +54,9 @@ export class Extract {
     const exit = await utils.exitDir(targetDir)
     if (exit) {
       const delState = await utils.rmdir(targetDir)
-      if (!delState) throw new Error(`删除文件夹:${targetDir} 失败`)
+      if (!delState) {
+        throw new Error(`删除文件夹:${targetDir} 失败`)
+      }
     }
     return targetDir
   }

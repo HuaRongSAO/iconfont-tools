@@ -1,7 +1,10 @@
 import fs from 'fs'
+import path from 'path'
 import component from './../template'
 import utils from './../utils'
-const testPath = '/home/chr/github/iconfont-tools/asset/font_hiytajitqeu/icon'
+
+const root = path.resolve('')
+const testPath = root + '/asset/font_hiytajitqeu/icon'
 
 test('component create', async () => {
   const files = await component(testPath, 't-icon', 'iconfont-weapp.css')

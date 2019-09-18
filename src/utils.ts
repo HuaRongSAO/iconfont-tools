@@ -4,7 +4,9 @@ import rimraf from 'rimraf'
 export const getState = <Promise>(path: string) => {
   return new Promise(resolve => {
     fs.stat(path, (err, stats) => {
-      if (err) return resolve(false)
+      if (err) {
+        return resolve(false)
+      }
       resolve(stats)
     })
   })
@@ -12,15 +14,21 @@ export const getState = <Promise>(path: string) => {
 export const exitDir = <Promise>(path: string) => {
   return new Promise(async resolve => {
     const fileStats: any = await getState(path)
-    if (!fileStats) return resolve(false)
-    if (!fileStats.isDirectory()) resolve(false)
+    if (!fileStats) {
+      return resolve(false)
+    }
+    if (!fileStats.isDirectory()) {
+      resolve(false)
+    }
     resolve(true)
   })
 }
 export const mkdir = <Promise>(path: string) => {
   return new Promise(resolve => {
     fs.mkdir(path, err => {
-      if (err) return resolve(false)
+      if (err) {
+        return resolve(false)
+      }
       resolve(true)
     })
   })

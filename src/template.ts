@@ -32,21 +32,27 @@ const wxmlTemplate = (icon: string = 'tool-icon') => {
 export const generateJs = async (path: string) => {
   const jsPath = `${path}/icon.js`
   const mkJs = await utils.mkFile(jsPath, jsTemplate)
-  if (!mkJs) throw new Error(`对不起，创建${jsPath}失败`)
+  if (!mkJs) {
+    throw new Error(`对不起，创建${jsPath}失败`)
+  }
   return jsPath
 }
 
 export const generateJson = async (path: string) => {
   const jsonPath = `${path}/icon.json`
   const mkJs = await utils.mkFile(jsonPath, jsonTemplate)
-  if (!mkJs) throw new Error(`对不起，创建${jsonPath}失败`)
+  if (!mkJs) {
+    throw new Error(`对不起，创建${jsonPath}失败`)
+  }
   return jsonPath
 }
 
 export const generateWxml = async (path: string, icon: string = 'tool-icon') => {
   const wxmlPath = `${path}/icon.wxml`
   const mkJs = await utils.mkFile(wxmlPath, wxmlTemplate(icon))
-  if (!mkJs) throw new Error(`对不起，创建${wxmlPath}失败`)
+  if (!mkJs) {
+    throw new Error(`对不起，创建${wxmlPath}失败`)
+  }
   return wxmlPath
 }
 

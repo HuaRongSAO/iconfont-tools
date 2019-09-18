@@ -67,7 +67,7 @@ const main = async () => {
   const vers = checkVersion()
   if (!vers) return
   const opt: OPT = await inquirerHandler()
-  const outPath = await create(opt)
+  create(opt)
 }
 
 main()

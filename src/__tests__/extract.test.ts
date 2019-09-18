@@ -1,14 +1,16 @@
 import fs from 'fs'
+import path from 'path'
 import { Extract } from '../extract'
 
-const path = '/home/chr/github/iconfont-tools/asset/font_hiytajitqeu'
+const root = path.resolve('')
+const testPath = root + '/asset/font_hiytajitqeu'
 const dirName = 'iconfont-weapp'
 const fileName = 'iconfont.css'
-const ext = new Extract(path, dirName, fileName)
+const ext = new Extract(testPath, dirName, fileName)
 
 test('Extract mkdir', async () => {
   await ext.generateDir()
-  const fgt = fs.statSync(`${path}/iconfont-weapp`)
+  const fgt = fs.statSync(`${testPath}/iconfont-weapp`)
   expect(fgt.isDirectory()).toBe(true)
 })
 

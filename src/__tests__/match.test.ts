@@ -1,6 +1,9 @@
 import fs from 'fs'
+import path from 'path'
 import { Match } from '../match'
-const target_path: string = '/home/chr/github/iconfont-tools/asset/font_hiytajitqeu/iconfont.js'
+
+const root = path.resolve('')
+const target_path: string = root + '/asset/font_hiytajitqeu/iconfont.js'
 
 test('Match', () => {
   const ex = new Match()
