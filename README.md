@@ -2,6 +2,8 @@
 
 适用于 iconfont 彩色图标的提取
 
+[![asciicast](https://asciinema.org/a/PNsjZSihUrCBU89WuODyc3Lws.svg)](https://asciinema.org/a/PNsjZSihUrCBU89WuODyc3Lws)
+
 ## 特性
 
 - 生成原生通用组件 icon

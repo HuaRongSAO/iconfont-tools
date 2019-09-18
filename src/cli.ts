@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import semver from 'semver'
@@ -20,7 +21,7 @@ const checkVersion = () => {
   return true
 }
 
-const inquirerHandler = async <OPT>() => {
+const inquirerHandler = async () => {
   const path = process.cwd()
   const { dirName } = await inquirer.prompt({
     type: 'input',
@@ -65,7 +66,9 @@ const inquirerHandler = async <OPT>() => {
 }
 const main = async () => {
   const vers = checkVersion()
-  if (!vers) return
+  if (!vers) {
+    return
+  }
   const opt: OPT = await inquirerHandler()
   create(opt)
 }
