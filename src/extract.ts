@@ -36,8 +36,13 @@ export class Extract {
   async generateStyle() {
     const { targetFile } = this
     const cssState = await utils.mkFile(`${targetFile}.css`, this.content)
+    if (!cssState) {
+      throw new Error(`对不起,生成文件：${this.targetFile}.css 失败`)
+    }
     const wxssState = await utils.mkFile(`${targetFile}.wxss`, this.content)
-    if (!cssState || !wxssState) throw new Error(`对不起,生成文件：${this.targetFile} 失败`)
+    if (!wxssState) {
+      throw new Error(`对不起,生成文件：${this.targetFile}.wxss 失败`)
+    }
     return `${targetFile}.css`
   }
 
