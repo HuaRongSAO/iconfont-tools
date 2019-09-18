@@ -1,0 +1,7 @@
+{
+  "linters": {
+    "*.{ts,js,json,md}": ["prettier --write", "git add"],
+    "src/**/*.{ts,tsx,d.ts,jsx}": ["tslint", "git add"],
+  },
+  "ignore": ["CHANGELOG.md"]
+}
