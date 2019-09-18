@@ -34,9 +34,11 @@ export class Extract {
   }
 
   async generateStyle() {
-    const mkState = await utils.mkFile(this.targetFile, this.content)
-    if (!mkState) throw new Error(`对不起,生成文件：${this.targetFile} 失败`)
-    return this.targetFile
+    const { targetFile } = this
+    const cssState = await utils.mkFile(`${targetFile}.css`, this.content)
+    const wxssState = await utils.mkFile(`${targetFile}.wxss`, this.content)
+    if (!cssState || !wxssState) throw new Error(`对不起,生成文件：${this.targetFile} 失败`)
+    return `${targetFile}.css`
   }
 
   async generateDir() {

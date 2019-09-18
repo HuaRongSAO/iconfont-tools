@@ -7,7 +7,7 @@ import { create, OPT } from './index'
 const DEFAULT_OPTION: OPT = {
   path: process.cwd(),
   dirName: 'iconfont-weapp',
-  fileName: 'iconfont-weapp.css',
+  fileName: 'iconfont-weapp-icon',
   icon: 't-icon',
   fontSize: '16px',
   component: true,

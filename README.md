@@ -14,7 +14,7 @@
 ## 特性
 
 - 生成原生通用组件 icon
-- 生成夸平台可用的 icon.css 文件
+- 生成夸平台可用的 iconfont-weapp.css 文件
 
 ## 如何安装
 

@@ -57,7 +57,7 @@ export const generateWxml = async (path: string, icon: string = 'tool-icon') => 
 }
 
 export const generateWxss = async (path: string, fileName: string) => {
-  const from = sysPath.resolve(path, `../${fileName}`)
+  const from = sysPath.resolve(path, `../${fileName}.css`)
   const wxssPath = `${path}/icon.wxss`
   await utils.copy(from, wxssPath)
   return wxssPath
