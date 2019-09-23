@@ -33,7 +33,7 @@ iconfont-tools  // 生成小程序专用文件
 - 1.直接引用样式
 
 ```HTML
-<view class="t-icon t-icon-your-iconName">
+<view class="t-icon t-icon-your-iconName"></view>
 ```
 
 - 2.使用组件 icon
@@ -42,10 +42,8 @@ page.json
 
 ```json
 {
-    {
-        "usingComponents": {
-        "icon": "/path/to-icon/icon",
-    }
+    "usingComponents": {
+    "icon": "/path/to-icon/icon",
 }
 ```
 
