@@ -1,2 +1,0 @@
-
-<cover-view class="t-icon t-icon-{{icon}}" style="width: {{ size }}rpx;height:width: {{ size }}rpx;"></cover-view>
