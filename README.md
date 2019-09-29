@@ -21,6 +21,8 @@
 
 方式一：
 
+> 需要下载，iconfont 的字体文件包，将其解压
+
 ```shell
 
 npm i -g iconfont-tools
@@ -32,6 +34,8 @@ iconfont-tools  // 生成小程序专用文件
 ```
 
 方式二：
+
+> 无需下载字体包，但是需要在 iconfont 生成在线链接
 
 <img src="https://raw.githubusercontent.com/HuaRongSAO/iconfont-tools/HEAD/docs/url.png" alt="drawing" width="60%"/>
 
