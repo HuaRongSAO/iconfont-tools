@@ -7,6 +7,7 @@ const root = path.resolve('')
 const TARGET_PATH: string = root + '/asset/font_hiytajitqeu'
 
 const DEFAULT_OPTION = {
+  iconfontUrl: '',
   path: TARGET_PATH,
   dirName: 'iconfont-weapp',
   fileName: 'iconfont-weapp.css',

@@ -1,21 +1,14 @@
 import { Extract } from './extract'
 import { Match } from './match'
 import component from './template'
-export interface OPT {
-  path: string
-  dirName: string
-  fileName: string
-  icon: string
-  fontSize: string
-  component: boolean
-}
+import { OPT } from './interface'
 
 export const create = async <Promise>(opt: OPT) => {
-  const { dirName, fileName, path, icon, fontSize } = opt
+  const { iconfontUrl, dirName, fileName, path, icon, fontSize } = opt
   const ex = new Extract(path, dirName, fileName)
   const mat = new Match(icon, fontSize)
 
-  const iconCtx = await ex.getIconfontContent()
+  const iconCtx = iconfontUrl ? await ex.getIconfontContentByDown(iconfontUrl) : await ex.getIconfontContent()
 
   mat
     .matchesContent(iconCtx)

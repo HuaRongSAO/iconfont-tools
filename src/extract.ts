@@ -1,4 +1,5 @@
 import utils from './utils'
+import axios from 'axios'
 export const INPUT_FILE = 'iconfont.js'
 
 export class Extract {
@@ -23,6 +24,13 @@ export class Extract {
     await this.generateDir()
     const target = await this.generateStyle()
     return target
+  }
+  async getIconfontContentByDown(url: string) {
+    url = url.indexOf('//') === 0 ? `https:${url}` : url
+    const { data } = await axios.get(url).catch(() => {
+      throw new Error(`对不起请求iconfont.js文件错误，请检查链接地址：${url}`)
+    })
+    return data
   }
   async getIconfontContent() {
     const target = `${this.path}/${INPUT_FILE}`

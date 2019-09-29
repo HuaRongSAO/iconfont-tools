@@ -5,7 +5,9 @@ export declare const rmdir: <Promise_1>(path: string) => Promise<unknown>
 export declare const mkFile: <Promise_1>(path: string, content: string) => Promise<unknown>
 export declare const readFile: <Promise_1>(path: string) => Promise<unknown>
 export declare const copy: <Promise_1>(from: string, to: string) => Promise<unknown>
+export declare function generatePath(flPath: string): Promise<string>
 declare const _default: {
+  generatePath: typeof generatePath
   getState: <Promise_1>(path: string) => Promise<unknown>
   exitDir: <Promise_2>(path: string) => Promise<unknown>
   mkdir: <Promise_3>(path: string) => Promise<unknown>

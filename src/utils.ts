@@ -1,5 +1,6 @@
 import fs from 'fs'
 import rimraf from 'rimraf'
+import path from 'path'
 
 export const getState = <Promise>(path: string) => {
   return new Promise(resolve => {
@@ -74,7 +75,22 @@ export const copy = <Promise>(from: string, to: string) => {
     }
   })
 }
+
+export async function generatePath(flPath: string) {
+  let targetPath = flPath
+  if (flPath.indexOf('.') === 0) {
+    const pwd = process.cwd()
+    targetPath = path.resolve(pwd, flPath)
+  }
+  const isDir = await exitDir(targetPath)
+  if (!isDir) {
+    throw new Error(`对不起，输出目录${targetPath}不存在！`)
+  }
+  return targetPath
+}
+
 export default {
+  generatePath,
   getState,
   exitDir,
   mkdir,

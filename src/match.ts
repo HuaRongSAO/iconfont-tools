@@ -1,3 +1,5 @@
+import { Icon, Svg } from './interface'
+
 const base_css = <String>(prefixIcon: string, size: string) => {
   return `
 .${prefixIcon} {
@@ -17,15 +19,6 @@ const generateStyleClass = <String>(name: string, svg: string) => {
     background: url(${svg});
 }
 `
-}
-
-interface Svg {
-  name: string
-  svg: string
-}
-interface Icon {
-  name: string
-  icon: string
 }
 
 export class Match {

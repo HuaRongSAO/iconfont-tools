@@ -15,18 +15,40 @@
 
 - 生成原生通用组件 icon
 - 生成夸平台可用的 iconfont-weapp.css 文件
+- 本地生产，也可以远程生成
 
 ## 如何安装
 
+方式一：
+
 ```shell
 
-npm  i  -g  iconfont-tools
+npm i -g iconfont-tools
 
-cd  project/asset/font_hiytajitqeu  // 进入图标文件所在文件夹
+cd project/asset/font_hiytajitqeu // 进入图标文件所在文件夹
 
 iconfont-tools  // 生成小程序专用文件
 
 ```
+
+方式二：
+
+<img src="https://raw.githubusercontent.com/HuaRongSAO/iconfont-tools/HEAD/docs/url.png" alt="drawing" width="60%"/>
+
+```shell
+
+npm i -g iconfont-tools
+
+# 复制在线链接 //at.alicdn.com/t/font_717026_fqwb5om0rvk.js
+
+iconfont-tools --form //at.alicdn.com/t/font_717026_fqwb5om0rvk.js --to ./output/dir-path
+
+```
+
+参数：
+
+- --form： iconfont 在线链接
+- --to： 生成目标路径，可以是绝对路径，也可以是相对路径。 dome： /home/chr/project/style 、 ./style
 
 ## 小程序 如何使用
 
@@ -42,8 +64,9 @@ page.json
 
 ```json
 {
-    "usingComponents": {
-    "icon": "/path/to-icon/icon",
+  "usingComponents": {
+    "icon": "/path/to-icon/icon"
+  }
 }
 ```
 

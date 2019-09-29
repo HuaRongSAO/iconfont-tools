@@ -2,9 +2,13 @@
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import semver from 'semver'
-import { create, OPT } from './index'
+import { create } from './index'
+import { OPT } from './interface'
+
+import { generatePath } from './utils'
 
 const DEFAULT_OPTION: OPT = {
+  iconfontUrl: '',
   path: process.cwd(),
   dirName: 'iconfont-weapp',
   fileName: 'iconfont-weapp-icon',
@@ -22,7 +26,27 @@ const checkVersion = () => {
 }
 
 const inquirerHandler = async () => {
-  const path = process.cwd()
+  let path = process.cwd()
+  let iconfontUrl = ''
+  const paramsForm = process.argv[2]
+  const paramsFormUrl = process.argv[3]
+  const paramsTo = process.argv[4]
+  const paramsToPath = process.argv[5]
+
+  if (['--from'].includes(paramsForm)) {
+    if (!paramsFormUrl) {
+      throw new Error('--from 参数不能为空')
+    }
+    iconfontUrl = paramsFormUrl
+  }
+
+  if (['--to'].includes(paramsTo)) {
+    if (!paramsToPath) {
+      throw new Error('--to 参数不能为空')
+    }
+    path = await generatePath(paramsToPath)
+  }
+
   const { dirName } = await inquirer.prompt({
     type: 'input',
     name: 'dirName',
@@ -53,9 +77,9 @@ const inquirerHandler = async () => {
     message: '是否生产小程序原生组件：',
     default: DEFAULT_OPTION.component,
   })
-  console.log('process.version', process.version)
 
   return {
+    iconfontUrl,
     path,
     dirName,
     fileName,
