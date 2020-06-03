@@ -2,7 +2,8 @@
   "transform": {
     "^.+\\.(t|j)sx?$": "ts-jest"
   },
-  "collectCoverageFrom": ["**/*test.ts", "!**/node_modules/**", "!lib/**", "!**/asset/**"],
-  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "collectCoverageFrom": ["!**/node_modules/**", "!lib/**", "!lib/**/**", "!**/asset/**", "src/*test.ts"],
+  "testRegex": "(/src\\/__tests__/.*|(\\.|/)(test|spec))\\.(ts?|tsx?)$",
+  "watchPathIgnorePatterns": ["<rootDir>"],
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
 }

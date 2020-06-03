@@ -12,6 +12,7 @@ export const getState = <Promise>(path: string) => {
     })
   })
 }
+
 export const exitDir = <Promise>(path: string) => {
   return new Promise(async resolve => {
     const fileStats: any = await getState(path)
@@ -24,9 +25,10 @@ export const exitDir = <Promise>(path: string) => {
     resolve(true)
   })
 }
+
 export const mkdir = <Promise>(path: string) => {
   return new Promise(resolve => {
-    fs.mkdir(path, err => {
+    fs.mkdir(path, { recursive: true }, err => {
       if (err) {
         return resolve(false)
       }
@@ -86,6 +88,12 @@ export async function generatePath(flPath: string) {
   if (!isDir) {
     throw new Error(`对不起，输出目录${targetPath}不存在！`)
   }
+  // if (!isDir) {
+  //   console.log(`对不起，输出目录${targetPath}不存在！`)
+  //   const createSuccess = await mkdir(targetPath)
+  //   if (!createSuccess) throw new Error(`目录${targetPath}创建失败`)
+  //   console.log(`目录${targetPath}创建成功`)
+  // }
   return targetPath
 }
 

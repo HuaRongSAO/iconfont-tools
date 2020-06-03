@@ -20,11 +20,13 @@ export class Extract {
   setContent(content: string) {
     this.content = content
   }
+
   async generate() {
     await this.generateDir()
     const target = await this.generateStyle()
     return target
   }
+
   async getIconfontContentByDown(url: string) {
     url = url.indexOf('//') === 0 ? `https:${url}` : url
     const { data } = await axios.get(url).catch(() => {
