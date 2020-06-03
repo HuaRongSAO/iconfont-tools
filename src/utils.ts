@@ -85,15 +85,15 @@ export async function generatePath(flPath: string) {
     targetPath = path.resolve(pwd, flPath)
   }
   const isDir = await exitDir(targetPath)
-  if (!isDir) {
-    throw new Error(`对不起，输出目录${targetPath}不存在！`)
-  }
   // if (!isDir) {
-  //   console.log(`对不起，输出目录${targetPath}不存在！`)
-  //   const createSuccess = await mkdir(targetPath)
-  //   if (!createSuccess) throw new Error(`目录${targetPath}创建失败`)
-  //   console.log(`目录${targetPath}创建成功`)
+  //   throw new Error(`对不起，输出目录${targetPath}不存在！`)
   // }
+  if (!isDir) {
+    console.log(`对不起，输出目录${targetPath}不存在！`)
+    const createSuccess = await mkdir(targetPath)
+    if (!createSuccess) throw new Error(`目录${targetPath}创建失败`)
+    console.log(`目录${targetPath}创建成功`)
+  }
   return targetPath
 }
 
