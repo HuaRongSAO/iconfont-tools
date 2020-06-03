@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.7.5"></a>
+## [1.7.5](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.7.4...v1.7.5) (2020-06-03)
+
+
+### Bug Fixes
+
+* remote ([69afb16](https://github.com/HuaRongSAO/iconfont-tools/commit/69afb16))
+
+
+
 <a name="1.7.4"></a>
 ## [1.7.4](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.7.3...v1.7.4) (2020-06-03)
 

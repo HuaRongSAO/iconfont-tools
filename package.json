@@ -1,6 +1,6 @@
 {
   "name": "iconfont-tools",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "description": "iconfont，小程序彩色图标方案，小程序彩色iconfont",
   "main": "lib/index.js",
   "bin": {
