@@ -45,7 +45,7 @@ npm i -g iconfont-tools
 
 # 复制在线链接 //at.alicdn.com/t/font_717026_fqwb5om0rvk.js
 
-iconfont-tools --form //at.alicdn.com/t/font_717026_fqwb5om0rvk.js --to ./output/dir-path
+iconfont-tools --from //at.alicdn.com/t/font_717026_fqwb5om0rvk.js --to ./output/dir-path
 
 ```
 
