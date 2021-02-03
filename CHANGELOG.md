@@ -1,6 +1,30 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.7.12](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.7.9...v1.7.12) (2021-02-03)
+
+
+### Bug Fixes
+
+* 更新依赖 ([1f021d2](https://github.com/HuaRongSAO/iconfont-tools/commit/1f021d2d067f19f2f11afd243885f2e4aa486991))
+* standard-version>=8.0.1 ([2034793](https://github.com/HuaRongSAO/iconfont-tools/commit/2034793ad119d0a78e237b396c73e8339e74e7a3))
+
+### [1.7.11](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.7.9...v1.7.11) (2021-02-03)
+
+
+### Bug Fixes
+
+* 更新依赖 ([1f021d2](https://github.com/HuaRongSAO/iconfont-tools/commit/1f021d2d067f19f2f11afd243885f2e4aa486991))
+* standard-version>=8.0.1 ([2034793](https://github.com/HuaRongSAO/iconfont-tools/commit/2034793ad119d0a78e237b396c73e8339e74e7a3))
+
+### [1.7.10](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.7.9...v1.7.10) (2021-02-03)
+
+
+### Bug Fixes
+
+* 更新依赖 ([1f021d2](https://github.com/HuaRongSAO/iconfont-tools/commit/1f021d2d067f19f2f11afd243885f2e4aa486991))
+* standard-version>=8.0.1 ([2034793](https://github.com/HuaRongSAO/iconfont-tools/commit/2034793ad119d0a78e237b396c73e8339e74e7a3))
 
 <a name="1.7.9"></a>
 ## [1.7.9](https://github.com/HuaRongSAO/iconfont-tools/compare/v1.7.8...v1.7.9) (2020-06-03)
