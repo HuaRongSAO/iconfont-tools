@@ -52,7 +52,7 @@ iconfont-tools --from //at.alicdn.com/t/font_717026_fqwb5om0rvk.js --to ./output
 参数：
 
 - --from: iconfont 在线链接
-- --to： 生成目标路径，可以是绝对路径，也可以是相对路径。 dome： /home/chr/project/style 、 ./style
+- --to： 生成目标路径，可以是绝对路径，也可以是相对路径。 dome： /home/chr/project/style ./style
 
 ## 小程序 如何使用
 
