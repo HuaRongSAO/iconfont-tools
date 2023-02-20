@@ -72,7 +72,7 @@ export class Match {
     const encoded: string = encodeURIComponent(svgStr)
       .replace(/'/g, '%27')
       .replace(/"/g, '%22')
-    return `data:image/svg+xml,${encoded}`
+    return `"data:image/svg+xml,${encoded}"`
   }
   generateSvg(): Match {
     const { svg2DataUrl, icons } = this
