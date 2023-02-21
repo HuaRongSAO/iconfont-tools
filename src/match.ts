@@ -4,7 +4,7 @@ const base_css = <String>(prefixIcon: string, size: string) => {
   return `
 .${prefixIcon} {
     display: inline-block;
-    width: ${size}; 
+    width: ${size};
     height: ${size};
     background-repeat: no-repeat;
     background-position: center;
@@ -48,7 +48,8 @@ export class Match {
     this.icons = icons.map(s => {
       s = s.replace('icon-', `${prefixIcon}-`)
       const ids: string[] | null = s.match(/id\=\"(.*?)\"/)
-      const name = (ids && ids[1]) || ''
+      let name = (ids && ids[1]) || ''
+      if (name && name.indexOf('icon-') === -1) name = `${prefixIcon}-`.concat(name)
       const icon = s.replace(/symbol/gi, 'svg')
       return { name, icon }
     })
@@ -72,7 +73,7 @@ export class Match {
     const encoded: string = encodeURIComponent(svgStr)
       .replace(/'/g, '%27')
       .replace(/"/g, '%22')
-    return `data:image/svg+xml,${encoded}`
+    return `"data:image/svg+xml,${encoded}"`
   }
   generateSvg(): Match {
     const { svg2DataUrl, icons } = this

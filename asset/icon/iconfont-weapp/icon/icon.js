@@ -1,13 +1,14 @@
+
 Component({
-  externalClasses: ['custom-class'],
-  properties: {
-    icon: {
-      type: String,
-      value: '',
+    externalClasses: ['custom-class'],
+    properties: {
+        icon: {
+            type: String,
+            value: '',
+        },
+        size: {
+            type: Number,
+            value: 32,
+        },
     },
-    size: {
-      type: Number,
-      value: 32,
-    },
-  },
 })
